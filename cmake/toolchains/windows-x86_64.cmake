@@ -1,0 +1,6 @@
+set(CNC_TARGET_SYSTEM Windows)
+set(CNC_TARGET_PROCESSOR x86_64)
+set(CNC_TARGET_TRIPLE x86_64-w64-mingw32)
+set(CNC_MSVC_ARCH x64)
+set(CNC_VS_PLATFORM x64)
+include("${CMAKE_CURRENT_LIST_DIR}/common.cmake")
