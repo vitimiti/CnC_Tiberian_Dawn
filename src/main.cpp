@@ -1,9 +1,15 @@
 #define SDL_MAIN_USE_CALLBACKS
 
-#include <SDL3/SDL_main.h>
+#include "app_state.hpp"
 
-auto SDL_AppInit([[maybe_unused]] void** appstate, [[maybe_unused]] int argc,
-                 [[maybe_unused]] char** argv) -> SDL_AppResult {
+#include <SDL3/SDL_main.h>
+#include <memory>
+
+auto SDL_AppInit(void** appstate, [[maybe_unused]] int argc, [[maybe_unused]] char** argv)
+    -> SDL_AppResult {
+    auto state = std::make_unique<AppState>();
+
+    *appstate = state.release();
     return SDL_APP_CONTINUE;
 }
 
@@ -16,6 +22,10 @@ auto SDL_AppEvent([[maybe_unused]] void* appstate, [[maybe_unused]] SDL_Event* e
     return SDL_APP_CONTINUE;
 }
 
-auto SDL_AppQuit([[maybe_unused]] void* appstate, [[maybe_unused]] SDL_AppResult result) -> void {
+auto SDL_AppQuit(void* appstate, [[maybe_unused]] SDL_AppResult result) -> void {
+    {
+        auto state = std::unique_ptr<AppState>(static_cast<AppState*>(appstate));
+    }
+
     SDL_Quit();
 }
