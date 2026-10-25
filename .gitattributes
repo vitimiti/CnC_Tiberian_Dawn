@@ -1,0 +1,33 @@
+# Normalize text for Linux, including legacy uppercase source extensions.
+* text=auto eol=lf
+
+*.[cC] text
+*.[cC][pP][pP] text
+*.[hH] text
+*.[hH][pP][pP] text
+*.[aA][sS][mM] text
+*.[iI][nN][cC] text
+*.[rR][cC] text
+*.[rR][hH] text
+*.sh text eol=lf
+*.[bB][aA][tT] text eol=crlf
+*.[cC][mM][dD] text eol=crlf
+
+# Never apply text conversion or text merges to binary files.
+*.[eE][xX][eE] binary
+*.[dD][lL][lL] binary
+*.[iI][cC][oO] binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ogg binary
+*.wav binary
+*.zip binary
+*.7z binary
+*.[mM][iI][xX] binary
+*.[mM][eE][gG] binary
+
+# Opt-in LFS storage for large project-owned, non-game-data files only.
+# Original game assets must not be committed, including through LFS.
+# No existing files are migrated. Requires Git LFS for files placed here.
+/lfs/** filter=lfs diff=lfs merge=lfs -text

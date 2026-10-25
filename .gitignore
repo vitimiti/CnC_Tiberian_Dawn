@@ -1,0 +1,71 @@
+# Out-of-source CMake, Ninja, Meson, and IDE builds.
+/build/
+/build-*/
+/cmake-build-*/
+/out/
+/dist/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/CTestTestfile.cmake
+/Testing/
+/install_manifest.txt
+/build.ninja
+/.ninja_deps
+/.ninja_log
+/meson-private/
+/meson-logs/
+/meson-info/
+compile_commands.json
+compile_flags.txt
+CMakeUserPresets.json
+.cache/
+.clangd/
+
+# Compiled objects, libraries, executables, and debug/profiling output.
+*.[oO]
+*.obj
+*.OBJ
+*.a
+*.lib
+*.LIB
+*.so
+*.so.*
+*.dylib
+*.dll
+*.DLL
+*.exe
+*.EXE
+*.out
+*.pdb
+*.ilk
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+
+# Machine-local editor settings and temporary files.
+/.vscode/
+/.idea/
+*.user
+*.suo
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local runtime state; shared source configuration remains trackable.
+/saves/
+/logs/
+/screenshots/
+imgui.ini
+
+# Proprietary game data must come from the user's own game installation.
+# Keep extracted/loose assets in these local-only directories.
+/data/
+/game-data/
+*.[mM][iI][xX]
+*.[mM][eE][gG]
