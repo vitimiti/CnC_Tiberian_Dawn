@@ -1,0 +1,6 @@
+[package]
+name = "cnc_tiberian_dawn"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
