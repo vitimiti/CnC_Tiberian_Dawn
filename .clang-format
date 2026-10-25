@@ -24,4 +24,5 @@ FixNamespaceComments: true
 SortIncludes: CaseSensitive
 IncludeBlocks: Regroup
 ReflowComments: false
+InsertNewlineAtEOF: true
 ...
