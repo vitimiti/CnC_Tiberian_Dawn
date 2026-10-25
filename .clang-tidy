@@ -17,10 +17,10 @@ Checks: >
   cppcoreguidelines-pro-bounds-*,
   cppcoreguidelines-pro-type-*,
   cppcoreguidelines-special-member-functions
-WarningsAsErrors: '*'
-HeaderFilterRegex: '.*'
+WarningsAsErrors: "*"
+HeaderFilterRegex: ".*"
 SystemHeaders: false
-HeaderFileExtensions: ['', h, H, hh, hpp, hxx]
+HeaderFileExtensions: ["", h, H, hh, hpp, hxx]
 ImplementationFileExtensions: [c, C, cc, cpp, CPP, cxx]
 FormatStyle: file
 InheritParentConfig: false
@@ -43,9 +43,10 @@ CheckOptions:
   readability-identifier-naming.ParameterCase: lower_case
   readability-identifier-naming.MemberCase: lower_case
   readability-identifier-naming.MemberSuffix: _
+  readability-identifier-naming.PublicMemberSuffix: ""
   readability-identifier-naming.ConstantCase: UPPER_CASE
   readability-identifier-naming.ConstantMemberCase: UPPER_CASE
-  readability-identifier-naming.ConstantMemberSuffix: ''
+  readability-identifier-naming.ConstantMemberSuffix: ""
   readability-identifier-naming.EnumConstantCase: UPPER_CASE
   readability-identifier-naming.MacroDefinitionCase: UPPER_CASE
 ...
